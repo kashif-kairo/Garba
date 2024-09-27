@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garba Night Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Garba Night Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="#profiles">Profiles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section id="filterSection">
+        <input type="text" id="search" placeholder="Search by name..." oninput="filterProfiles()">
+        
+        <select id="branchFilter" onchange="filterProfiles()">
+            <option value="">All Branches</option>
+            <option value="CSE">CSE</option>
+            <option value="CSE-R">CSE-R</option>
+            <option value="CS">CS</option>
+            <option value="AI">AI</option>
+            <option value="DS">DS</option>
+            <option value="CSBS">CSBS</option>
+            <option value="AIML">AIML</option>
+            <option value="IoT">IoT</option>
+            <option value="Cyber">Cyber</option>
+            <option value="ECE">ECE</option>
+            <option value="Bio-Tech">Bio-Tech</option>
+            <option value="ME">ME</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="MCA/BCA">MCA/BCA</option>
+            <option value="Pharmacy">Pharmacy</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <select id="genderFilter" onchange="filterProfiles()">
+            <option value="">All Genders</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <select id="yearFilter" onchange="filterProfiles()">
+            <option value="">All Years</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+        </select>
+    </section>
+
+    <!-- Profiles Section -->
+    <section id="profiles">
+        <h2>Available Profiles</h2>
+        <div id="profileList"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
